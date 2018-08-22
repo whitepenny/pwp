@@ -1,0 +1,30 @@
+.media_columns {}
+
+.media_columns_row {}
+
+.media_columns_cell {}
+
+.media_columns_items {}
+
+.media_columns_item {
+
+  @media @max_md {
+    padding-top: 60px;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  @media @min_md {
+    .transition_delay_loop(10, 0.25s);
+
+    &:nth-child(odd) {
+      padding-right: 2%;
+    }
+
+    &:nth-child(even) {
+      padding-left: 2%;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+.main_nav {
+  .fixed;
+  .flex;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+
+  // background: fade(@black, 90);
+  .gradient_vertical( @black, fade(@black, 90) );
+
+  align-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.25s linear,
+    visibility 0.25s linear;
+
+  .menu-main-navigation-container {
+    width: 100%;
+
+    align-self: center;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    li {
+      margin: 20px 0;
+      padding: 0;
+
+      opacity: 0;
+      transform: translateY(20px);
+      transition:
+        opacity 0.25s linear 0.25s,
+        transform 0.25s @bezier 0.25s;
+    }
+
+    a {
+      .futura_heavy;
+
+      color: @white;
+      font-size: 28px;
+      letter-spacing: 0.05em;
+      padding: 10px;
+      text-transform: uppercase;
+
+      &:hover,
+      &:focus {
+        color: @mint;
+      }
+
+      @media @min_md {
+        font-size: 30px;
+      }
+
+      @media @min_lg {
+        font-size: 32px;
+      }
+    }
+  }
+
+  //
+
+  &.fs-swap-active {
+    opacity: 1;
+    visibility: visible;
+
+    // .menu {
+
+      ul {
+
+        li {
+          .transition_delay_loop_raw(10, 0.05s, 0.15s);
+
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    // }
+  }
+}

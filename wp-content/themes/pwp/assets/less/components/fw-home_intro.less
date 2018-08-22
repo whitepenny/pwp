@@ -1,0 +1,196 @@
+.home_intro {
+  text-align: center;
+}
+
+.home_intro_row {
+  .relative;
+
+  @media @min_sm {
+    padding-top: 20px;
+  }
+}
+
+.home_intro_cell {
+  // .relative;
+}
+
+.home_intro_icon {
+  .block;
+
+  font-size: 7px;
+
+  @media @max_sm {
+    margin-top: -40px;
+    margin-bottom: 20px;
+  }
+
+  @media @min_sm {
+    .absolute;
+
+    top: -50px;
+    right: 5px;
+
+    font-size: 6px;
+  }
+
+  @media @min_md {
+    top: -70px;
+    right: 10px;
+
+    font-size: 8px;
+  }
+
+  @media @min_lg {
+    right: 20px;
+
+    font-size: 9px;
+  }
+
+  @media @min_xl {
+    right: 20px;
+
+    font-size: 10px;
+  }
+}
+
+//
+
+.link_block {
+  margin-top: 40px;
+
+  @media @min_md {
+    margin-top: 60px;
+  }
+
+  @media @min_lg {
+    margin-top: 80px;
+  }
+
+  // &:nth-child(1) {
+  //   margin-top: 0;
+  // }
+  //
+  // @media @min_sm {
+  //
+  //   &:nth-child(1),
+  //   &:nth-child(2) {
+  //     margin-top: 0;
+  //   }
+  // }
+}
+
+.link_block_link {
+  .block;
+  .relative;
+
+  &:hover,
+  &:focus {
+
+    .link_block_image {
+
+      &:after {
+        opacity: 1;
+      }
+    }
+
+    .link_block_title,
+    .link_block_icon {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .link_block_icon {
+      transition-delay: 0.1s;
+    }
+  }
+}
+
+.link_block_image {
+  .block;
+  .relative;
+
+  &:after {
+    .absolute;
+
+    height: 100%;
+    width: 100%;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    background: fade(@black, 60);
+    content: '';
+
+    @media @min_lg {
+      opacity: 0;
+      transition: opacity 0.25s linear;
+    }
+  }
+}
+
+.link_block_container {
+  .absolute;
+  .flex;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  text-align: center;
+}
+
+.link_block_title,
+.link_block_icon {
+
+  @media @min_lg {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.25s linear,
+      transform 0.25s ease;
+  }
+}
+
+.link_block_title {
+  .futura_heavy;
+
+  width: 100%;
+
+  color: @white;
+  font-size: 28px;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  margin: 0;
+  text-transform: uppercase;
+
+  @media @min_md {
+    font-size: 32px;
+  }
+
+  @media @min_lg {
+    font-size: 36px;
+  }
+}
+
+.link_block_icon {
+  font-size: 7px;
+  margin: 20px 0 -20px;
+
+  @media @min_md {
+    font-size: 9px;
+    margin: 30px 0 -30px;
+  }
+
+  @media @min_lg {
+    font-size: 10px;
+    margin: 40px 0 -40px;
+  }
+}

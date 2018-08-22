@@ -1,0 +1,114 @@
+.header {
+  .fixed;
+
+  width: 100%;
+
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+
+  background: @black;
+  color: @white;
+  padding: 15px;
+  transition: background 0.15s linear;
+
+  @media @min_lg {
+    padding: 20px 30px;
+  }
+
+  //
+
+  &.flipped {
+    background: transparent;
+
+    &.scrolled {
+      background: @black;
+    }
+  }
+}
+
+.header_logo {
+  .inline_block;
+
+  .icon {
+    font-size: 7px;
+
+    @media @min_md {
+      font-size: 8px;
+    }
+
+    @media @min_lg {
+      font-size: 10px;
+    }
+  }
+}
+
+.header_nav_handle {
+  .contain;
+  .absolute;
+
+  height: 40px;
+  width: 40px;
+
+  top: 15px;
+  right: 15px;
+
+  font-size: 9px;
+  padding: 0;
+  text-indent: 100px;
+  white-space: nowrap;
+
+  @media @min_md {
+    top: 18px;
+    right: 18px;
+
+    font-size: 9px;
+  }
+
+  @media @min_lg {
+    top: 27px;
+    right: 27px;
+
+    font-size: 10px;
+  }
+
+  &:before,
+  &:after {
+    &:extend(.icon:before all);
+
+    .absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    content: '';
+    margin: auto;
+    transition: opacity 0.15s linear;
+  }
+
+  &:before {
+    &:extend(.icon.mobile_handle:before all);
+
+    opacity: 1;
+  }
+
+  &:after {
+    &:extend(.icon.mobile_close:before all);
+
+    opacity: 0;
+  }
+
+  &.fs-swap-active {
+
+    &:before {
+      opacity: 0;
+    }
+
+    &:after {
+      opacity: 1;
+    }
+  }
+}

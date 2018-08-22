@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="12px" viewBox="0 0 29 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-800.000000, -536.000000)">
+        <g id="Top" transform="translate(0.000000, -1.000000)" fill="#00CB99">
+            <g id="Button" transform="translate(583.000000, 510.000000)">
+                <g id="Arrow" transform="translate(217.000000, 27.000000)">
+                    <polygon id="Triangle" points="29 6 17 12 17 0"></polygon>
+                    <rect id="Rectangle-11" x="0" y="5" width="17" height="2"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

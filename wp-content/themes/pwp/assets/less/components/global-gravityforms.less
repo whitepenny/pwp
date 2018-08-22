@@ -1,0 +1,295 @@
+.input_text() {
+  .transition_link;
+  .block;
+
+  width: 100%;
+
+  background: @sky;
+  border: 2px solid @sky;
+  color: @black;
+  font-size: 14px;
+  padding: 14px 15px 12px;
+
+  @media @min_md {
+    // border-width: 3px;
+    padding: 15px 17px 13px;
+  }
+
+  @media @min_lg {
+    // border-width: 3px;
+    font-size: 16px;
+    padding: 20px 22px 18px;
+  }
+
+  @media @min_xl {
+    // border-width: 3px;
+  }
+
+  &::placeholder {
+    color: @black;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    @media @min_lg {
+      font-size: 15px;
+    }
+  }
+
+  &:focus {
+    border-color: @black;
+  }
+}
+
+.dropdown {
+  // .button_gold;
+
+  appearance: none;
+  border-radius: 0;
+  background-color: @white;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAALCAYAAAF6wf9jAAAABGdBTUEAALGPC/xhBQAAAc9JREFUOBG9VN0uA0EUPmdmH8DPrQfYLaFCIqEVN3iCSoREIhGhfQjvsKv+IohI8Ab+ItktabhwQdUrlBBcd2ecqcxGN62NFebmzJzv/HxzzpmBm61kC9By84lpJYPl2qYMDj/faHctG0Yo2F39GpByiel9WDKOvvCcxIA8zHBv+WAtbFB39lY7ewqOla9Thg6oUguoXhsGHxhcKF1pvJahcltFhK107mFW66MkaoOL5c6kL/wbxtmw8IVLgdYp0LzGY8viRndHbGfl6NnWSbMArmNtN8Oa6RnNR7/rmK9hA88x90DKme9aGvYJzp5jvXi2+aYVrm3tqyGiFdRYY1EycKCrPwNIAwCPJMhMOldmiPibAacn45hPcZlFMY+NI9XvmGo1Sld95YyNDWVL11HRakP/eLsDEqaoZoIzIz2YvbuM8ouD13ri5c0+EHhCRFsB4c3gfOzrK9SBFbFC5W6XejapdAi4mcrdz/26dzpBAxkMjcIuVxK9flWeEoE2At6R43hqsVyU5yNGoVTZowtMKDsitkHE5v+SmMqjVh3BTxVA7duR4pTeXTt9OcTr0472a6lseeE/iGkuDQlq0M13dYOonqHEQ6pY7j+JaQ4fge66avUuM+kAAAAASUVORK5CYII=');
+  background-position: right center;
+  background-repeat: no-repeat;
+  padding-right: 80px;
+
+  @media @min_lg {
+    padding-right: 100px;
+  }
+}
+
+//
+
+.gravityform_block {}
+
+.gform_anchor {
+
+  &:before {
+    .block;
+
+    width: 1px;
+
+    content: '';
+    pointer-events: none;
+
+    @media @min_md {
+      height: 60px;
+      margin: -60px 0 0;
+    }
+
+    @media @min_lg {
+      height: 80px;
+      margin: -80px 0 0;
+    }
+  }
+}
+
+.gform_anchor {
+  .block;
+
+  margin: 0;
+}
+
+.gravityform { }
+
+.gform_confirmation_message {
+  &:extend(.page_content all);
+}
+
+.gravityform_container {
+
+  form {
+    padding: 0;
+
+    .content_link;
+  }
+
+  h2 {
+    color: @black;
+    font-size: 24px;
+    margin: 0 0 10px 0;
+    text-align: center;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    .relative;
+
+    width: 100%;
+
+    list-style: none;
+    margin: 0 0 20px;
+    padding: 0;
+
+    @media @min_lg {
+      margin: 0 0 30px;
+    }
+
+    .name_first,
+    .name_last {
+      .block;
+
+      margin: 0;
+    }
+
+    .name_last {
+      margin: 15px 0 0;
+
+      @media @min_md {
+        margin: 0;
+      }
+    }
+
+    &.gform_hidden {
+      margin: 0;
+    }
+  }
+
+  .gform_footer {
+    text-align: center;
+  }
+
+  label {
+    .screenreader;
+  }
+
+  .ginput_complex {
+
+    label {
+      color: @gray_60;
+      font-size: 12px;
+      margin: 5px 0;
+      text-transform: uppercase;
+    }
+  }
+
+  input[type='text'],
+  input[type='tel'],
+  input[type='email'],
+  input[type='url'],
+  textarea,
+  select {
+    .input_text();
+  }
+
+  select {
+    appearance: none;
+    border-radius: 0;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAABGdBTUEAALGPC/xhBQAAAFxJREFUKBVjYGBgWALE/wlgkBqiAR9Q5X0gxmUoSA6khiRgBVT9B4jRDQWJgeTIAvVAXegGgsTIBsxAnUeBGGYoiA0SowgoAHV/hGIQm2TAgqbjAZCfBRUDsUkGABlZJFWx7vXfAAAAAElFTkSuQmCC');
+    background-position: right center;
+    background-repeat: no-repeat;
+  }
+
+  input[type='submit'] {
+    .transition_link;
+    .button_arrow;
+
+    cursor: pointer;
+  }
+
+  .gfield_html {
+    clear: both;
+
+    h3 {
+      font-size: 26px;
+      margin: 0;
+
+      @media @min_lg {
+        font-size: 26px;
+      }
+    }
+  }
+
+  .gfield {
+
+    &:after {
+      width: 100%;
+
+      content: '';
+      display: table;
+    }
+
+    @media @min_md {
+      clear: both;
+
+      &.split_left,
+      &.split_right,
+      .ginput_complex > span {
+        width: 49%;
+
+        clear: none;
+      }
+
+      &.split_left,
+      .ginput_complex > span:nth-child(odd) {
+        .left;
+
+        clear: left;
+      }
+
+      &.split_right,
+      .ginput_complex > span:nth-child(even) {
+        .right;
+      }
+
+      &.third {
+        .left;
+
+        width: 31%;
+
+        clear: none;
+        margin-right: 3.5%;
+
+        &.end {
+          .right;
+
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .gform_validation_container {
+    .screenreader;
+  }
+
+  .validation_error {
+    width: 100%;
+
+    background: @red;
+    color: @white;
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0 0 15px 0;
+    padding: 10px 15px;
+  }
+
+  .validation_message {
+    color: @red;
+    clear: both;
+    font-size: 13px;
+    padding: 5px 0 0;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  .gfield_error {
+
+    input[type='text'],
+    input[type='tel'],
+    input[type='email'],
+    input[type='url'],
+    textarea {
+      border-color: @red;
+      color: @red;
+    }
+
+    .validation_message {
+      color: @red;
+    }
+  }
+}
