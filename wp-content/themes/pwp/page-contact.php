@@ -42,7 +42,7 @@ if ( have_posts() ) :
           <?php endif; ?>
           <br>
           <?php if ( ! empty( $email_address ) ) : ?>
-          <a href="tel:<?php echo $email_address; ?>" class="footer_link"><?php echo $email_address; ?></a>
+          <a href="mailto:<?php echo $email_address; ?>" class="footer_link"><?php echo $email_address; ?></a>
           <?php endif; ?>
         </p>
       </div>

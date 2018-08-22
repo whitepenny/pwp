@@ -21,7 +21,7 @@ $social_links = get_field( 'global_social_links', 'option' );
           <a href="tel:<?php echo $phone_number; ?>" class="footer_link"><?php echo $phone_number; ?></a>
           <?php endif; ?>
           <?php if ( ! empty( $email_address ) ) : ?>
-          <a href="tel:<?php echo $email_address; ?>" class="footer_link"><?php echo $email_address; ?></a>
+          <a href="mailto:<?php echo $email_address; ?>" class="footer_link"><?php echo $email_address; ?></a>
           <?php endif; ?>
         </div>
         <div class="fs-cell fs-sm-half fs-md-half fs-lg-2 footer_column footer_nav">
