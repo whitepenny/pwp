@@ -39,7 +39,7 @@ $clients = get_sub_field( 'clients' );
         ?>
         <span class="clients_item">
           <?php if ( ! empty( $client['link'] ) ) : ?>
-          <a href="<?php echo $client['link']['url']; ?>" class="clients_item_link">
+          <a target="_blank" href="<?php echo $client['link']['url']; ?>" class="clients_item_link">
             <img src="<?php echo $image['src']; ?>" alt="" class="clients_item_image">
           </a>
           <?php else : ?>

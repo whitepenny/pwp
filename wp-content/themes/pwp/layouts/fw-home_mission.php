@@ -22,7 +22,7 @@ $badges = get_sub_field( 'badges' );
         ?>
         <span class="content_badge">
           <?php if ( ! empty( $badge['link'] ) ) : ?>
-          <a href="<?php echo $badge['link']['url']; ?>" class="content_badge_link">
+          <a target="_blank" href="<?php echo $badge['link']['url']; ?>" class="content_badge_link">
             <img src="<?php echo $image['src']; ?>" alt="" class="content_badge_image">
           </a>
           <?php else : ?>
