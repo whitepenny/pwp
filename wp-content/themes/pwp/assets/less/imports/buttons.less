@@ -1,48 +1,98 @@
-// .button_base(@border:@white, @color:@black) {
-//   .lato_bold;
-//   .inline_block;
-//   .transition_link;
 //
-//   border: 2px solid @border;
-//   color: @color;
-//   font-size: 16px;
-//   letter-spacing: 0.05em;
-//   line-height: 1;
-//   padding: 15px 25px;
-//
-//   @media @min_lg {
-//     border-width: 3px;
-//     font-size: 18px;
-//     padding: 20px 35px;
-//   }
-// }
-//
-// .button_gold() {
-//   .button_base(@gold, @gold);
-// }
-//
-// .button_white() {
-//   .button_base(@white, @white);
-// }
-//
-// .button_hover_blue() {
-//
-//   &:hover,
-//   &:focus {
-//     // border-color: @blue_dark;
-//     // color: @blue_dark;
-//     background-color: @blue_dark;
-//     border-color: @blue_dark;
-//     color: @white;
-//   }
-// }
-//
-// .button_hover_white() {
-//
-//   &:hover,
-//   &:focus {
-//     background-color: @white;
-//     // color: @black;
-//     color: @blue_dark;
-//   }
-// }
+
+.link_arrow {
+  .futura_heavy;
+  .inline_block;
+  .transition_link(0.2s, ease);
+
+  color: @black;
+  font-size: 14px;
+  letter-spacing: 0.25em;
+  line-height: 24px;
+  padding: 5px 0;
+  text-transform: uppercase;
+
+  &:after {
+    .inline_block;
+
+    &:extend(.icon:before all);
+    &:extend(.icon.arrow_right_black:before all);
+
+    font-size: 8px;
+    margin: 0 0 1px 5px;
+    transition:
+      transform 0.25s @bezier;
+    vertical-align: bottom;
+
+    @media @min_md {
+      font-size: 9px;
+      margin-bottom: 5px;
+    }
+  }
+
+  &:hover,
+  a:hover &,
+  &:focus,
+  a:focus & {
+    color: @mint;
+
+    &:after {
+      &:extend(.icon.arrow_right_mint:before all);
+
+      transform: translateX(5px);
+    }
+  }
+}
+
+.button_arrow {
+  .link_arrow;
+
+  background: @mint;
+  background-image: linear-gradient(to right, @white 0, @white 50%, @mint 50%, @mint 100%);
+  background-position: 99% center;
+  background-size: 202% 100%;
+  border: 2px solid @mint;
+  color: @black;
+  padding: 13px 23px;
+
+  @media @min_md {
+    padding: 18px 33px;
+  }
+
+  //
+
+  &:hover,
+  a:hover &,
+  &:focus,
+  a:focus & {
+    background-position: 0% center;
+    color: @mint;
+
+    &:after {
+      &:extend(.icon.arrow_right_mint:before all);
+    }
+  }
+}
+
+.button_arrow_black {
+  border-color: @black;
+  background-image: linear-gradient(to right, @white 0, @white 50%, @black 50%, @black 100%);
+  color: @mint;
+
+  &:after {
+    &:extend(.icon.arrow_right_mint:before all);
+  }
+
+  &:hover,
+  a&:hover,
+  a:hover &,
+  &:focus,
+  a&:focus,
+  a:focus & {
+    color: @black;
+
+    &:after {
+      &:extend(.icon.arrow_right_black:before all);
+    }
+  }
+}
