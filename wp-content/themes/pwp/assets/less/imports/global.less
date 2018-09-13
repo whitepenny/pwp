@@ -516,3 +516,44 @@ blockquote {
     }
   }
 }
+
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.pagination {
+  text-align: center;
+  background: #f9f9f9;
+  padding: 30px;
+  margin-top: 50px;
+
+  .page-numbers {
+    display: inline-block;
+    background: #eee;
+    display: inline-block;
+    min-width: 24px;
+    line-height: 24px;
+    font-size: 16px;
+    color: #333;
+
+    &.next, &.prev {
+      background: none;
+      font-size: 80%;
+    }
+
+    &.current {
+      background: @mint;
+      color: #fff;
+    }
+  }
+}

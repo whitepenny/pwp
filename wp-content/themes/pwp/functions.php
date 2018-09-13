@@ -65,6 +65,7 @@ function pwp_enqueue_resources() {
   // Styles
   wp_enqueue_style( 'pwp-fonts', 'https://use.typekit.net/kwu0qex.css', array(), null, 'all' );
   wp_enqueue_style( 'pwp-site', PWP_THEME_URI . '/public/css/site.css', array(), PWP_VERSION, 'all' );
+  wp_enqueue_style( 'font-awesome-free', '//use.fontawesome.com/releases/v5.2.0/css/all.css' );
 
   // // Scripts - Head
   wp_enqueue_script( 'pwp-modernizr', PWP_THEME_URI . '/public/js/modernizr.js', array(), PWP_VERSION, false );

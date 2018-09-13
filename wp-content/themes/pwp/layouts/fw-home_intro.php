@@ -22,7 +22,7 @@ $items = get_sub_field( 'items' );
     <div class="link_block padded_item fs-cell fs-md-half fs-lg-half" data-checkpoint-animation="fade-up">
       <a href="<?php echo $item['link']['url']; ?>" class="link_block_link">
         <div class="link_block_image">
-          <?php pwp_responsive_image( pwp_image_link_block( $item['image']['ID'] ), '' ); ?>
+          <?php pwp_responsive_image( pwp_image_link_block( $item['image']['ID'] ), '', $item['image']['alt'] ); ?>
         </div>
         <div class="link_block_container">
           <h3 class="link_block_title"><?php echo $item['link']['title']; ?></h3>
