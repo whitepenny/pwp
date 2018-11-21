@@ -79,6 +79,25 @@
             "maxlength": "",
             "rows": 4,
             "new_lines": ""
+        },
+        {
+            "key": "field_5bf5a92394a6b",
+            "label": "Show Header Video",
+            "name": "show_header_video",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Would you like to hide the main video?",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -100,5 +119,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1524878143
+    "modified": 1542826351
 }

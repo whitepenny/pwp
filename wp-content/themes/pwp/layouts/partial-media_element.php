@@ -3,6 +3,10 @@ if ( ! empty( $video ) ) :
   $video_url = pwp_get_oembed_url( $video );
 endif;
 ?>
+
+<?php if (! $hide == true): ?>
+  
+
 <div class="media_element section_padded bg_white">
   <div class="fs-row fs-all-justify-center media_element_row" data-checkpoint-animation="fade-up">
     <div class="fs-cell fs-md-5 fs-lg-10 fs-xl-10 media_element_cell">
@@ -22,3 +26,5 @@ endif;
     </div>
   </div>
 </div>
+
+<?php endif ?>
