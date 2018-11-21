@@ -9,11 +9,9 @@ require_once 'includes/utils-admin.php';
 require_once 'includes/utils-images.php';
 require_once 'includes/utils-image-sizes.php';
 
-// Hide ACF on production
 
-if ( ! PWP_DEV ) {
-  add_filter( 'acf/settings/show_admin', '__return_false' );
-}
+
+
 
 // Init
 
